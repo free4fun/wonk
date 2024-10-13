@@ -1,0 +1,34 @@
+name: wonk
+description: "A WONK replica MVP."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  provider: ^6.0.5
+  http: ^1.2.2
+  shared_preferences: ^2.1.1
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1
+  auth0_flutter: ^1.2.1
+  flutter_dotenv: ^5.0.2
+  google_maps_flutter: ^2.3.0
+  geolocator: ^9.0.2
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  mockito: ^5.0.0
+  build_runner: ^2.1.0
+
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env

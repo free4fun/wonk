@@ -14,6 +14,7 @@ class _AddCafeScreenState extends State<AddCafeScreen> {
   final _addressController = TextEditingController();
   final _scheduleController = TextEditingController();
   LatLng _selectedLocation = LatLng(-34.9011, -56.1645); // Montevideo
+  final CafeService _cafeService = CafeService();
 
   @override
   Widget build(BuildContext context) {
@@ -97,8 +98,7 @@ class _AddCafeScreenState extends State<AddCafeScreen> {
         openingHours: _scheduleController.text,
       );
 
-      final cafeService = CafeService();
-      await cafeService.addCafe(newCafe);
+      await _cafeService.addCafe(newCafe);
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Cafetería agregada con éxito')),
